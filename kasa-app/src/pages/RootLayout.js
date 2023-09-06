@@ -1,6 +1,6 @@
-import Header from "../components/header";
+import Header from "../components/header/header";
 import {Outlet} from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 
 export default function RootLayout(){
     return (

@@ -1,6 +1,6 @@
 import React from'react';
-import Banniere from '../components/Banner';
-// import CardComponent from '../components/CardComponent';
+import Banniere from '../components/banner/Banner';
+import CardComponent from '../components/cardcomponents/CardComponent';
 
 export default function Home() {
     return <>
@@ -9,7 +9,7 @@ export default function Home() {
                         <Banniere />
                     </div>
                     <main>
-                    {/* <CardComponent /> */}
+                    <CardComponent />
                     </main>
                 </div>
             </>;

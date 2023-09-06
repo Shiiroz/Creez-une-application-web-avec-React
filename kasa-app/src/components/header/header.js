@@ -1,5 +1,5 @@
-import Nav from './nav.js';
-import "../style/header.css";
+import Nav from '../nav/nav';
+import "./header.scss";
 
 export default function Header() {
     return (
