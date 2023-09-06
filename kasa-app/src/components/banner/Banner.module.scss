@@ -1,0 +1,25 @@
+.banner{
+    position: relative;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.bannerTexte{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%); 
+    // background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    width: 100%;
+    
+    
+
+}
+
+.ban {
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 25px;
+  }
