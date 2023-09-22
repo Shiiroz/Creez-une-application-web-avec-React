@@ -3,6 +3,7 @@ import RootLayout from "./pages/RootLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ErrorPage from "./pages/ErrorPage";
+import LogementPage from "./pages/LogementPage";
 
 
 const routes = createBrowserRouter([
@@ -18,6 +19,9 @@ const routes = createBrowserRouter([
       {
         path: "/about",
         element: <About />
+      },
+      {path:"/logement/:id",
+      element:<LogementPage/>
       },
       
     ]

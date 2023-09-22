@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import DataLogement from '../../data/data.json';
-import Carrousel from '/'; 
-import Tag from '/'; 
-import Host from '/'; 
-import Rate from '/'; 
+import Carrousel from './Carrousel'; 
+import Tag from './tag'; 
+import Host from './Host'; 
+import Rate from './Rate'; 
 
 
 
@@ -50,8 +50,8 @@ function Logments() {
               {/* Hosting */}
               <div className="description-info__proprietaire__nom-prop">
                 <Host
-                  name={logement.host.name} // Utilisez "logement.host.name"
-                  picture={logement.host.picture} // Utilisez "logement.host.picture"
+                  name={logement.host.name} 
+                  picture={logement.host.picture} 
                 />
               </div>
               {/* Rating */}
@@ -64,7 +64,7 @@ function Logments() {
         {/* Collapse */}
         <div className="description-centent">
           <div className="description-centent__description">
-            <Collapse title="Description" content={logement.description} /> {/* Utilisez "logement.description" */}
+            {/* <Collapse title="Description" content={logement.description} /> Utilisez "logement.description" */}
           </div>
           <div className="description-centent__equipement">{equipement}</div>
         </div>

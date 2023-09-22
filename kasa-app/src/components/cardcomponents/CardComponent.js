@@ -1,11 +1,19 @@
 import React from 'react'
-import cards from './CardComponent.scss'
+import classes from './CardComponent.module.scss'
 
-function CardComponent() {
+function CardComponent({image, title}) {
   return (
-    <div className='grid'>
-      <p>test</p>
-    </div>
+    <figure className={classes.grid}>
+       <img src={image} alt={title}  className={classes.carte_img} />
+       <figcaption>
+          <h2 className={classes.carte_titre}>{title}</h2>
+          <div className={classes.card_overlay}></div>
+       </figcaption>
+
+        
+
+        
+    </figure>
   )
 }
 
