@@ -9,11 +9,11 @@ function Catalogue() {
     <div className={classes.home_catalogue}>
       {DataLogements.map((logement) => {
         return (
-          <article key={logement.id}>
-            <Link to={`/logement/${logement.id}`}>
+           
+            <Link to={`/logement/${logement.id}`} key={logement.id}>
               <CardComponent image={logement.cover} title={logement.title} />
             </Link>
-          </article>
+          
         );
       })}
     </div>

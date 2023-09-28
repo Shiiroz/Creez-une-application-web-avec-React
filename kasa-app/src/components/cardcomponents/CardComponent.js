@@ -9,10 +9,6 @@ function CardComponent({image, title}) {
           <h2 className={classes.carte_titre}>{title}</h2>
           <div className={classes.card_overlay}></div>
        </figcaption>
-
-        
-
-        
     </figure>
   )
 }

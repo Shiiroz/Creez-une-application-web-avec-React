@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ErrorPage from "./pages/ErrorPage";
 import LogementPage from "./pages/LogementPage";
-
+import "./App.css";
 
 const routes = createBrowserRouter([
   {
