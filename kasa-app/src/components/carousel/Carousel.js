@@ -1,4 +1,4 @@
-import classes from './carousel.module.scss';
+import './carousel.scss';
 import rightChevron from '../../assets/chevron_carousel_right.png';
 import leftChevron from '../../assets/chevron_carousel_left.png';
 import { useState } from 'react'
@@ -20,7 +20,7 @@ export default function Slider({imageSlider}) {
     }
 
     return (
-        <section style={{backgroundImage : `url(${imageSlider[currentIndex]})`}} className={classes.carousel}>
+        <section style={{backgroundImage : `url(${imageSlider[currentIndex]})`}} className='carousel'>
             {imageSlider.length > 1 && 
                 <>
                     <img 
