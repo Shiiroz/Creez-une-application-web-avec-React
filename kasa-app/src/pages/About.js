@@ -5,6 +5,10 @@ import Banniere from '../components/banner/Banner';
 
 
 function About() {
+
+	const imageUrlAbout = '/images/banner/aboutBanner.png';
+
+
   const aboutDatas = [
 		{
 			"id": "1",
@@ -30,7 +34,8 @@ function About() {
 
 	return (
 		<div>
-      <Banniere />
+      <Banniere imageUrl={imageUrlAbout} />
+	  
 			<main className={classes.about_main}>
 				{aboutDatas.map(data => {
 					return (
