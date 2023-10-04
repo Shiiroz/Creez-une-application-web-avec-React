@@ -1,4 +1,4 @@
-import './collapse.scss'
+import classes from './collapse.scss';
 import arrow from '../../assets/arrow.png';
 import { useState } from 'react';
 
@@ -8,7 +8,7 @@ export default function Collapse({title, content}) {
 
     return (
         <>
-            <div className="collapse" >
+            <div className={classes.collapse} >
                 <h3 className='collapse_title' onClick={() => setToggle(!toggle)} >
                     {title}
                     <img 
