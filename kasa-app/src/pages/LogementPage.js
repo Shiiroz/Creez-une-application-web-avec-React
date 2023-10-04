@@ -2,7 +2,7 @@ import React from 'react';
 import datas from '../data/data.json';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from "react"
-import './LogementPage.scss';
+import classes from './LogementPage.module.scss';
 import etoileGris from '../assets/etoileGris.png';
 import etoileRouge from '../assets/etoileRouge.png';
 import Collapse from '../components/collapse/Collapse';
@@ -32,9 +32,9 @@ function LogementPage() {
 		<>
 
 			<Slider imageSlider={imageSlider}/>
-			<main className="LogementPage">
-				<div className="LogementPage_content">
-					<div className="LogementPage_content_infos">
+			<main className={classes.LogementPage}>
+				<div className={classes.LogementPage_content}>
+					<div className= {classes.LogementPage_content_infos}>
 						<h1>{dataCurrentLogementPage[0].title}</h1>
 						<p>{dataCurrentLogementPage[0].location}</p>
 						<div>
@@ -45,16 +45,16 @@ function LogementPage() {
 							})}
 						</div>
 					</div>
-					<div className="LogementPage_content_host">
+					<div className={classes.LogementPage_content_host}>
 						<div>
-							<div className='LogementPage_content_host_name'>
+							<div className={classes.LogementPage_content_host_name}>
 								<span>{name[0]}</span>
 								<span>{name[1]}</span>
 							</div>
 							<img src={dataCurrentLogementPage[0].host.picture} alt="LogementPage" />
 						</div>
 							
-						<div className="LogementPage_content_host_stars">
+						<div className={classes.LogementPage_content_host_stars}>
 							{[...Array(5)].map((star, index) => {
 								const ratingValue = index + 1;
 								return (
@@ -64,11 +64,11 @@ function LogementPage() {
 						</div>
 					</div>
 				</div>
-				<div className="LogementPage_collapse">
-					<div className="LogementPage_collapse_item">
+				<div className={classes.LogementPage_collapse}>
+					<div className={classes.LogementPage_collapse_item}>
 						<Collapse title={'Description'} content={description} />	
 					</div>
-					<div className="LogementPage_collapse_item">
+					<div className={classes.LogementPage_collapse_item}>
 						<Collapse title={'Équipements'} content={equipments}/>
 					</div>	
 				</div>
