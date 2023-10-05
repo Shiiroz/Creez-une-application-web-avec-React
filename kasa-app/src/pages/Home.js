@@ -1,4 +1,5 @@
 import React from'react';
+import './Home.scss';
 import Banniere from '../components/banner/Banner';
 import Catalogue from '../components/cardcomponents/Catalogue';
 
@@ -8,7 +9,7 @@ export default function Home() {
 
     return <>
                 <div className="home">
-                    <div>
+                    <div className='banner'>
                         <Banniere imageUrl={imageUrlHome} text={textePremierePage} />
                     </div>
                     <main>

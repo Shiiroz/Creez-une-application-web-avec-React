@@ -4,11 +4,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        //justify-content: center;
         align-items: center;
         color: #ff6060;
         width: 95%;
-        margin: 0 auto;
+        margin: 15px auto;
         @media screen and (max-width: 650px){
             display: flex;
             flex-direction: column;
@@ -81,5 +80,15 @@
                 }
             }
         }
+    }
+    &_collapse{
+        display: flex;
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+            &_item{
+                width: 46%;
+            }
     }
 }
