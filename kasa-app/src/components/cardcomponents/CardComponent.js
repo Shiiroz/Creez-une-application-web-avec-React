@@ -1,16 +1,30 @@
 import React from 'react'
 import classes from './CardComponent.module.scss'
 
-function CardComponent({image, title}) {
+// function CardComponent({image, title}) {
+//   return (
+//     <figure className={classes.grid}>
+//        <img src={image} alt={title}  className={classes.carte_img} />
+//        <figcaption>
+//           <h2 className={classes.carte_titre}>{title}</h2>
+//           <div className={classes.card_overlay}></div>
+//        </figcaption>
+//     </figure>
+//   )
+// }
+
+// export default CardComponent
+
+
+function Card({image, title}) {
   return (
-    <figure className={classes.grid}>
-       <img src={image} alt={title}  className={classes.carte_img} />
-       <figcaption>
-          <h2 className={classes.carte_titre}>{title}</h2>
-          <div className={classes.card_overlay}></div>
-       </figcaption>
-    </figure>
-  )
+    <div className="card">
+      <img src={image} alt={title} className="card_img" />
+      <div className="card_overlay"></div>
+
+      <h2 className="card_title">{title}</h2>
+    </div>
+  );
 }
 
-export default CardComponent
+export default Card;

@@ -1,5 +1,5 @@
 body{
-    font: 🇲🇸 ;
+    font-family: 'Montserrat', sans-serif;
 }
 .App-routerProvider{
     max-width: 1280px;
