@@ -5,7 +5,7 @@ import Catalogue from '../components/cardcomponents/Catalogue';
 
 export default function Home() {
     const imageUrlHome = '/images/banner/homeBanner.png';
-    const textePremierePage = 'Chez vous, partout et ailleurs';
+    const textePremierePage = 'Chez vous,\n partout et ailleurs';
 
     return <>
                 <div className="home">
