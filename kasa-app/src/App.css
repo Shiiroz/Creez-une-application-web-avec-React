@@ -1,5 +1,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: cyan;
 }
 .App-routerProvider{
     max-width: 1280px;
@@ -16,8 +17,4 @@ body{
     color: green !important;
     text-decoration:none !important;
    
-}
-
-main{
-    background-color: pink !;
 }

@@ -8,9 +8,7 @@ export default function RootLayout(){
         <>
         <div className={classes.Header}>
             <Header  />
-           <main>
-            <Outlet></Outlet>          
-           </main>
+            <Outlet></Outlet>
            <Footer />
         </div>
         </>

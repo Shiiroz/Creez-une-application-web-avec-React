@@ -10,9 +10,9 @@ function Catalogue() {
       {DataLogements.map((logement) => {
         return (
            
-            <Link to={`/logement/${logement.id}`} key={logement.id}>
-              <CardComponent image={logement.cover} title={logement.title} />
-            </Link>
+             <Link to={`/logement/${logement.id}`} key={logement.id}>
+               <CardComponent image={logement.cover} title={logement.title} />
+             </Link>
           
         );
       })}

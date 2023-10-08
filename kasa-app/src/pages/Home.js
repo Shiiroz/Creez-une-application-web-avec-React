@@ -10,12 +10,9 @@ export default function Home() {
     return <>
                 <div className="home">
                     <div className='banner'>
-                        <Banniere imageUrl={imageUrlHome} text={textePremierePage} />
+                        <Banniere imageUrl={imageUrlHome} text={textePremierePage} showDarkOverlay={true} />
                     </div>
-                    <main>
                     <Catalogue />
-                    </main>
-                    
                 </div>
             </>;
     

@@ -1,7 +1,7 @@
 import React from 'react';
 import Collapse from '../components/collapse/Collapse';
 import classes from './about.module.scss';
-import Banniere from '../components/banner/Banner';
+import Banniere from '../components/banner/BannerAbout';
 
 
 function About() {
@@ -34,7 +34,7 @@ function About() {
 
 	return (
 		<div>
-      <Banniere imageUrl={imageUrlAbout} />
+      		<Banniere imageUrl={imageUrlAbout} showDarkOverlay={false} />
 	  
 			<main className={classes.about_main}>
 				{aboutDatas.map(data => {
