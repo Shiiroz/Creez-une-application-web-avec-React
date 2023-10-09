@@ -1,0 +1,20 @@
+.home_catalogue{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-wrap: wrap;
+  background-color: #f7f7f7;;
+  padding: 50px;
+  border-radius: 25px;
+
+  a {
+    width: 30%;
+    @media screen and (max-width: 1230px){
+      width: 40%;
+      margin: auto;
+    }
+    @media screen and (max-width: 550px){
+      width: 100%;
+    }
+  }
+}
