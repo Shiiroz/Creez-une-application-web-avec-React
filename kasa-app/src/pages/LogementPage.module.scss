@@ -21,6 +21,12 @@
             gap: 10px;
             font-weight: 500;
             font-size: 14px;
+
+            p{
+                margin-bottom: 10px;
+                background-color: pink !important;
+            }
+
             button{
                 display: inline;
                 padding: 5px 15px;
@@ -28,8 +34,8 @@
                 cursor: pointer;
                 border-radius: 10px;
                 border: none;
-                color: #ff6060;
-                background-color: #f7f7f7;
+                color: #f7f7f7;
+                background-color: #ff6060;
                 &:hover{
                     box-shadow: 0 2px 8px rgb(0, 0, 0);
                 }
