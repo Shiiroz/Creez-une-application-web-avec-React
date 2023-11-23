@@ -3,6 +3,10 @@ header{
     justify-content: space-between;
     align-items: center;
 
+        @media screen and (max-width: 500px){
+            width: 96%;
+            margin-left: 2%;
+        }
 
 }
 
