@@ -34,7 +34,7 @@ function About() {
 
 	return (
 		<div>
-      		<Banniere imageUrl={imageUrlAbout}  />
+      		<Banniere className={classes.banniere_about} imageUrl={imageUrlAbout}  />
 	  
 			<main className={classes.about_main}>
 				{aboutDatas.map(data => {

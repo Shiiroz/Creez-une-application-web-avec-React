@@ -9,7 +9,7 @@
     width: 95%;
     margin: 43px auto;
     @media screen and (max-width: 650px){
-        height: 200px;  
+        height: 260px;  
         margin: 20px auto;   
     }
     &_arrow{
@@ -23,9 +23,15 @@
         }
         &_right{
             right: 25px;
+            @media screen and (max-width: 500px){
+                right: 1px; 
+            }
         }
         &_left{
             left: 25px;
+            @media screen and (max-width: 500px){
+               left: 1px;  
+            }
         }
     }
     .slideCount{

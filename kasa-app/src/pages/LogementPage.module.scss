@@ -1,5 +1,11 @@
 
 .LogementPage{
+    h1{
+        margin: 0;
+        @media screen and (max-width: 500px) {
+            font-size: 20px;
+        }
+    }
     &_content{
         display: flex;
         flex-direction: row;
@@ -35,6 +41,10 @@
                 background-color: #ff6060;
                 &:hover{
                     box-shadow: 0 2px 8px rgb(0, 0, 0);
+                }
+
+                @media screen and (max-width: 500px) {
+                    padding: 6px 11px;
                 }
             }
             div{
@@ -95,9 +105,16 @@
         width: 95%;
         margin: 0 auto;
         justify-content: space-between;
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+        }
 
             &_item{
                 width: 46%;
+                @media screen and (max-width: 500px) {
+                    width: 96%;
+                    margin-bottom: 2%;
+                }
             }
     }
 }
