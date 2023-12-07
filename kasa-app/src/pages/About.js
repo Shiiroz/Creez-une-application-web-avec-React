@@ -8,7 +8,7 @@ function About() {
 
 	const imageUrlAbout = '/images/banner/aboutBanner.png';
 
-
+	// Données concernant la section "About"
   const aboutDatas = [
 		{
 			"id": "1",
@@ -37,9 +37,11 @@ function About() {
       		<Banniere className={classes.banniere_about} imageUrl={imageUrlAbout}  />
 	  
 			<main className={classes.about_main}>
+				{/* Rechercher les données "About" pour créer des composants Collapse */}
 				{aboutDatas.map(data => {
 					return (
 						<div key={data.id} className={classes.about_main_collapse}>
+							{/* Composant Collapse avec le titre et le contenu spécifiés */}
 							<Collapse   title={data.title} content={data.content} />
 						</div>
 					)}

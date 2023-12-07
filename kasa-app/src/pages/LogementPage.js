@@ -13,38 +13,58 @@ import Slider from "../components/carousel/Carousel";
 
 function LogementPage() {
  
-  const [imageSlider, setImageSlider] = useState([]);
+		// État local pour les images du slider
+		const [imageSlider, setImageSlider] = useState([]);
 
-	const idLogementPage = useParams('id').id;
-	const dataCurrentLogementPage = datas.filter(data => data.id === idLogementPage);
-	
-	useEffect(() => {
+		// Récupération de l'ID du logement à partir des paramètres de l'URL
+		const idLogementPage = useParams('id').id;
+
+		// Filtrage des données pour obtenir les informations du logement actuel
 		const dataCurrentLogementPage = datas.filter(data => data.id === idLogementPage);
-		setImageSlider(dataCurrentLogementPage[0].pictures);
-	}, [idLogementPage]);
 
-	const name = dataCurrentLogementPage[0].host.name.split(' '); 
-	const rating = dataCurrentLogementPage[0].rating;
-	const description  = dataCurrentLogementPage[0].description;
-	const equipments = dataCurrentLogementPage[0].equipments;
+		// Utilisation de useEffect pour mettre à jour les images du slider par rapport a l'ID 
+		useEffect(() => {
+		const dataCurrentLogementPage = datas.filter(data => data.id === idLogementPage);
+		// Mise à jour de l'état des images du slider avec les images du logement actuel
+		setImageSlider(dataCurrentLogementPage[0].pictures);
+		}, [idLogementPage]);
+
+		// Extraction du prénom et du nom de l'hôte à partir de la donnée
+		const name = dataCurrentLogementPage[0].host.name.split(' ');
+
+		// Extraction de la note de l'évaluation du logement
+		const rating = dataCurrentLogementPage[0].rating;
+
+		// Extraction de la description du logement
+		const description  = dataCurrentLogementPage[0].description;
+
+		// Extraction de la liste des équipements du logement
+		const equipments = dataCurrentLogementPage[0].equipments;
+
 
 	return (
 		<>
 
-			<Slider imageSlider={imageSlider}/>
+			{/* Utilisation du composant Slider avec la propriété imageSlider */}
+			<Slider imageSlider={imageSlider} />
+
 			<main className={classes.LogementPage}>
 				<div className={classes.LogementPage_content}>
-					<div className= {classes.LogementPage_content_infos}>
+					{/* Section d'informations sur le logement */}
+					<div className={classes.LogementPage_content_infos}>
 						<h1>{dataCurrentLogementPage[0].title}</h1>
 						<p>{dataCurrentLogementPage[0].location}</p>
 						<div>
+							{/* Affichage des tags du logement */}
 							{dataCurrentLogementPage[0].tags.map((tag, index) => {
-								return (
-									<button key={index}>{tag}</button>
-								)
+							return (
+								<button key={index}>{tag}</button>
+							)
 							})}
 						</div>
 					</div>
+
+					{/* Section d'informations sur l'hôte du logement */}
 					<div className={classes.LogementPage_content_host}>
 						<div>
 							<div className={classes.LogementPage_content_host_name}>
@@ -53,26 +73,32 @@ function LogementPage() {
 							</div>
 							<img src={dataCurrentLogementPage[0].host.picture} alt="LogementPage" />
 						</div>
-							
+
+						{/* Section d'évaluation de l'hôte en étoiles */}
 						<div className={classes.LogementPage_content_host_stars}>
 							{[...Array(5)].map((star, index) => {
-								const ratingValue = index + 1;
-								return (
-									<img key={index} src={ratingValue <= rating ? etoileRouge : etoileGris} alt="star" />
-								)
+							const ratingValue = index + 1;
+							return (
+								<img key={index} src={ratingValue <= rating ? etoileRouge : etoileGris} alt="star" />
+							)
 							})}
 						</div>
 					</div>
 				</div>
+
+				{/* Section collapsible pour la description et les équipements */}
 				<div className={classes.LogementPage_collapse}>
 					<div className={classes.LogementPage_collapse_item}>
-						<Collapse title={'Description'} content={description} />	
+					{/* Composant Collapse pour la description */}
+					<Collapse title={'Description'} content={description} />
 					</div>
 					<div className={classes.LogementPage_collapse_item}>
-						<Collapse title={'Équipements'} content={equipments}/>
-					</div>	
+					{/* Composant Collapse pour les équipements */}
+					<Collapse title={'Équipements'} content={equipments}/>
+					</div>
 				</div>
 			</main>
+
 			
 		</>
 	)

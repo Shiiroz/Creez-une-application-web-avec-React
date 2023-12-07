@@ -33,14 +33,14 @@ return (
     <section style={{backgroundImage : `url(${imageSlider[currentIndex]})`}} className='carousel'>
         {imageSlider.length > 1 && 
             <>
-                {/* Flèche droite pour passer à la diapositive suivante */}
+                {/* Flèche droite pour passer à l'image' suivante */}
                 <img 
                     className='carousel_arrow carousel_arrow_right' 
                     src={rightChevron} 
                     alt="Afficher la diapositive suivante" 
                     onClick={nextSlide}
                 />
-                {/* Flèche gauche pour passer à la diapositive précédente */}
+                {/* Flèche gauche pour passer à l'image' précédente */}
                 <img 
                     className='carousel_arrow carousel_arrow_left' 
                     src={leftChevron} 
