@@ -48,7 +48,7 @@ return (
                     onClick={prevSlide}
                 />
                 {/* Compteur de diapositives (commenté car actuellement désactivé) */}
-                {/* <p className='slideCount'>{currentIndex + 1} / {imageSlider.length}</p> */}
+                <p className='slideCount'>{currentIndex + 1} / {imageSlider.length}</p>
             </>
         } 
     </section>
